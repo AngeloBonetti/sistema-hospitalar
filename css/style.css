@@ -494,3 +494,23 @@ th {
         padding: 15px;
     }
 }
+
+/* CORREÇÃO APENAS PARA O HEADER NO MOBILE */
+@media (max-width: 768px) {
+    .header {
+        margin-top: 20px !important;
+        padding-top: 15px !important;
+    }
+    
+    .main-content {
+        padding-top: 10px;
+    }
+}
+
+/* CORREÇÃO ESPECÍFICA PARA IPHONE */
+@media (max-width: 390px) {
+    .header {
+        margin-top: 25px !important;
+        padding-top: 20px !important;
+    }
+}

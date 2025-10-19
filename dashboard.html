@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - VidaPlus SGHSS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-hospital-alt"></i> VidaPlus</h2>
+            </div>
+            <div class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="pacientes.html" class="nav-item">
+                    <i class="fas fa-user-injured"></i> Pacientes
+                </a>
+                <a href="consultas.html" class="nav-item">
+                    <i class="fas fa-calendar-check"></i> Consultas
+                </a>
+                <a href="prontuarios.html" class="nav-item">
+                    <i class="fas fa-file-medical"></i> Prontuários
+                </a>
+                <a href="profissionais.html" class="nav-item">
+                    <i class="fas fa-user-md"></i> Profissionais
+                </a>
+                <a href="telemedicina.html" class="nav-item">
+                    <i class="fas fa-video"></i> Telemedicina
+                </a>
+                <a href="sobre.html" class="nav-item">
+                    <i class="fas fa-info-circle"></i> Sobre
+                </a>
+                <a href="#" class="nav-item" onclick="auth.logout()">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Dashboard do Sistema</h1>
+                <p>Bem-vindo ao Sistema de Gestão Hospitalar VidaPlus</p>
+            </div>
+
+            <!-- Estatísticas -->
+            <div class="stats-grid">
+                <div class="stat-card pacientes">
+                    <i class="fas fa-user-injured"></i>
+                    <div class="stat-number" id="totalPacientes">0</div>
+                    <div class="stat-label">Pacientes Cadastrados</div>
+                </div>
+                <div class="stat-card consultas">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="stat-number" id="totalConsultas">0</div>
+                    <div class="stat-label">Consultas Hoje</div>
+                </div>
+                <div class="stat-card medicos">
+                    <i class="fas fa-user-md"></i>
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Médicos Ativos</div>
+                </div>
+                <div class="stat-card urgentes">
+                    <i class="fas fa-ambulance"></i>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Casos Urgentes</div>
+                </div>
+            </div>
+
+            <!-- Consultas do Dia -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h3><i class="fas fa-list"></i> Consultas de Hoje</h3>
+                    <a href="agendar-consulta.html" class="btn-primary">
+                        <i class="fas fa-plus"></i> Nova Consulta
+                    </a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Paciente</th>
+                            <th>Médico</th>
+                            <th>Horário</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="consultasTable">
+                        <!-- Preenchido via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

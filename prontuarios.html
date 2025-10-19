@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuários - VidaPlus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- MENU LATERAL COMPLETO -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-hospital-alt"></i> VidaPlus</h2>
+            </div>
+            <div class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="pacientes.html" class="nav-item">
+                    <i class="fas fa-user-injured"></i> Pacientes
+                </a>
+                <a href="consultas.html" class="nav-item">
+                    <i class="fas fa-calendar-check"></i> Consultas
+                </a>
+                <a href="prontuarios.html" class="nav-item active">
+                    <i class="fas fa-file-medical"></i> Prontuários
+                </a>
+                <a href="profissionais.html" class="nav-item">
+                    <i class="fas fa-user-md"></i> Profissionais
+                </a>
+                <a href="telemedicina.html" class="nav-item">
+                    <i class="fas fa-video"></i> Telemedicina
+                </a>
+                <a href="sobre.html" class="nav-item">
+                    <i class="fas fa-info-circle"></i> Sobre
+                </a>
+                <a href="#" class="nav-item" onclick="auth.logout()">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="header">
+                <h1><i class="fas fa-file-medical"></i> Prontuários Eletrônicos</h1>
+                <p>Histórico médico completo dos pacientes</p>
+            </div>
+
+            <div style="text-align: center; padding: 60px 20px; color: var(--gray);">
+                <i class="fas fa-file-medical-alt" style="font-size: 4rem; margin-bottom: 20px; color: var(--primary);"></i>
+                <h2>Módulo em Desenvolvimento</h2>
+                <p>Os prontuários eletrônicos estarão disponíveis em breve.</p>
+                <p>Enquanto isso, acesse a lista de pacientes para visualizar informações básicas.</p>
+                <a href="pacientes.html" class="btn-primary" style="margin-top: 20px;">
+                    <i class="fas fa-user-injured"></i> Ver Pacientes
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

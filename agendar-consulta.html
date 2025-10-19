@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta - VidaPlus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-hospital-alt"></i> VidaPlus</h2>
+            </div>
+            <div class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a>
+                <a href="pacientes.html" class="nav-item">
+                    <i class="fas fa-user-injured"></i> Pacientes
+                </a>
+                <a href="consultas.html" class="nav-item active">
+                    <i class="fas fa-calendar-check"></i> Consultas
+                </a>
+                <a href="sobre.html" class="nav-item">
+                    <i class="fas fa-info-circle"></i> Sobre
+                </a>
+                <a href="#" class="nav-item" onclick="auth.logout()">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="header">
+                <h1><i class="fas fa-calendar-plus"></i> Agendar Nova Consulta</h1>
+                <p>Preencha os dados da consulta</p>
+            </div>
+
+            <div class="form-container">
+                <form id="formConsulta">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="paciente">Paciente *</label>
+                            <select id="paciente" required>
+                                <option value="">Selecione um paciente</option>
+                                <!-- Preenchido via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="medico">Médico *</label>
+                            <select id="medico" required>
+                                <option value="">Selecione o médico</option>
+                                <option value="Dr. João Silva">Dr. João Silva - Cardiologia</option>
+                                <option value="Dra. Ana Costa">Dra. Ana Costa - Clínico Geral</option>
+                                <option value="Dr. Pedro Santos">Dr. Pedro Santos - Ortopedia</option>
+                                <option value="Dra. Maria Oliveira">Dra. Maria Oliveira - Pediatria</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data *</label>
+                            <input type="date" id="data" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Hora *</label>
+                            <input type="time" id="hora" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo de Consulta *</label>
+                            <select id="tipo" required>
+                                <option value="presencial">Presencial</option>
+                                <option value="telemedicina">Telemedicina</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="especialidade">Especialidade</label>
+                            <input type="text" id="especialidade" placeholder="Especialidade médica">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="observacoes">Observações</label>
+                        <textarea id="observacoes" rows="3" placeholder="Observações sobre a consulta"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="consultas.html" class="btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-calendar-check"></i> Agendar Consulta
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/consultas.js"></script>
+</body>
+</html>
